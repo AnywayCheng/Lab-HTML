@@ -9,15 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/style1.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style1.css') }}">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="./HomePage.html">Lab</a></li>
-            <li><a href="./Professor.html">Professor</a></li>
-            <li><a href="./Member.html">Members</a></li>
-            <li><a href="./Thisis.html">Thisis</a></li>
+            <li><a href="{{ url_for('home') }}">Lab</a></li>
+            <li><a href="{{ url_for('professor') }}">Professor</a></li>
+            <li><a href="{{ url_for('members') }}">Members</a></li>
+            <li><a href="{{ url_for('thesis') }}">Thesis</a></li>
             <li class="logo">logo</li>
         </ul>
     </nav> 
@@ -28,7 +28,7 @@
 
     <main>
         <div class = information>
-            <img src="../Picture/C.Y.Lee.jpg">
+            <img src ="{{ url_for('static', filename='Picture/C.Y.Lee.jpg') }}">
             <div>
                 <h1>李建樂  助理教授</h1>
                 <div class = info>
