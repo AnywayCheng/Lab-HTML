@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding-bottom: 5rem;
+    min-height: 100vh;
+    background-color: #02133E;
+}
+
+nav {
+    background-color: #002b48;
+} 
+nav ul {
+    display: flex;
+    padding-left: 1rem;
+    list-style-type: none;
+}
+nav ul li {
+    display: flex;
+}
+nav ul li.logo {
+    margin-left: auto;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration-line: none;
+    transition: all 0.25s ease;
+}
+nav ul li a {
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration-line: none;
+    transition: all 0.25s ease;
+}
+nav ul li a:hover {
+    background-color: gray;
+}
+
+header {
+    width: 100%;
+    height: 30vh;
+    padding: 5rem 1rem;
+    background-image: url("../Picture/Bioinformatics.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 35%;
+} 
+.headertitle {  
+    padding-right: 5rem;
+    font-size: 45pt;
+    color: white;
+    text-align: right;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+.information {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    padding-left: 15%;
+    gap: 1rem;
+}
+.information div {
+    flex-grow: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.information h1 {
+    padding-left: 2rem;
+    padding-right: 0rem;
+}
+.information img{
+    max-width: 100%;
+    height: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+.info h2 {
+    padding-right: 0rem;
+    color: white;
+    font-size: 20pt;
+    margin-top: 1rem;
+}
+.info ul {
+    padding-left: 3rem;
+}
+.info ul li {
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+    font-size: 18pt;
+}
+
+main div h1,main div h3 {
+    padding-bottom: 1rem;
+    padding-left: 25%;
+    
+}   
+main div h1 {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    color: white;
+    font-size: 30pt;
+}
+main div h3 {
+    color: #dcdcdc;
+    font-size: 20pt;
+}
+
+main div ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 26.5%;
+    padding-right: 20%; 
+}
+main div ul li {       
+    width: 100%;
+    padding-bottom: 1rem;
+    list-style-type: square;
+    font-size: 15pt;
+    color: #C0C0C0;
+    line-height: 2;
+}
+main div ul li::marker {
+    color: #C0C0C0;
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+      padding: 3rem 1rem;
+      height: 35vh;
+      background-position-y: 25%;
+    }
+    .headertitle {
+      padding-right: 4rem;
+      font-size: 45pt;
+      text-align: right;
+    }
+    main div h1 ,main div h3{
+        padding-left: 3rem;
+        text-align: left;
+    }
+    main div h1 {
+      font-size: 28pt; 
+    }
+    main div h3 {
+        font-size: 22pt;
+    }
+    main div ul{
+        padding-left: 6rem;
+        padding-right: 2rem;
+    }
+    main div ul li{
+        font-size: 20pt;
+    }
+    nav ul {
+      flex-direction: row;
+      padding-left: 1rem;
+    }
+    nav ul li a, nav ul li.logo {
+      padding: 1rem 1.5rem;
+      font-size: 20pt;
+    }
+    .information{
+        flex-direction: column;
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+    .information img{
+        max-width: 75%;
+        height: 75%;
+        align-self: center;
+    }
+    .information h1,.information div{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .info h2{
+        font-size: 20pt;
+    }
+    .info ul li{
+        font-size: 20pt;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+      padding: 3rem 0.5rem;
+      height: 30vh;
+      background-position-y: 25%;
+    }
+    .headertitle {
+      padding-right: 3rem;
+      font-size: 35 pt;
+      text-align: right;
+    }
+    main div h1 ,main div h3{
+        padding-left: 3rem;
+        text-align: left;
+    }
+    main div h1 {
+      font-size: 28pt; 
+    }
+    main div h3 {
+        font-size: 22pt;
+    }
+    main div ul{
+        padding-left: 6rem;
+        padding-right: 2rem;
+    }
+    main div ul li{
+        font-size: 20pt;
+    }
+    nav ul {
+      flex-direction: row;
+      padding-left: 1rem;
+    }
+    nav ul li a, nav ul li.logo {
+      padding: 0.75rem 1rem;
+      font-size: 18pt;
+    }
+    .information{
+        flex-direction: column;
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+    .information img{
+        max-width: 75%;
+        height: 75%;
+        align-self: center;
+    }
+    .information h1,.information div{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .info h2{
+        font-size: 24pt;
+    }
+    .info ul li{
+        font-size: 20pt;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+      padding: 1rem 0rem;
+      height: 25vh;
+      background-position-y: 35%;
+    }
+    .headertitle {
+      padding-right: 2rem;
+      font-size: 25pt;
+      text-align: right;
+    }
+    main div h1 ,main div h3{
+        padding-left: 2rem;
+        text-align: left;
+    }
+    main div h1 {
+      font-size: 24pt;
+      
+    }
+    main div h3 {
+        font-size: 20pt;
+    }
+    main div ul{
+        padding-left: 4rem;
+        padding-right: 2rem;
+    }
+    main div ul li{
+        font-size: 16pt;
+    }
+    nav ul {
+      flex-direction: column;
+      padding-left: 1rem;
+    }
+    nav ul li a, nav ul li.logo {
+      padding: 0.75rem;
+      font-size: 16pt;
+    }
+    .information{
+        flex-direction: column;
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+    .information img{
+        max-width: 75%;
+        height: 75%;
+        align-self: center;
+    }
+    .information h1,.information div{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .info h2{
+        font-size: 20pt;
+    }
+    .info ul li{
+        font-size: 16pt;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+      padding: 0rem 0rem;
+      height: 20vh;
+      background-position-y: 50%;
+    }
+    .headertitle {
+      padding-right: 0rem;
+      font-size: 20pt;
+      text-align: right;
+    }
+    main div h1 ,main div h3{
+        padding-left: 1rem;
+        text-align: left;
+    }
+    main div h1{
+        font-size: 20pt;
+    }
+    main div h3{
+        font-size: 15pt;
+    }
+    main div ul{
+        padding-left: 2.5rem;
+        padding-right: 0;
+    }
+    main div ul li{
+        font-size: 12pt;
+    }
+    nav ul {
+      flex-direction: column;
+      padding-left: 0.5rem;
+    }
+    nav ul li a, nav ul li.logo {
+      padding: 0.5rem;
+      font-size: 14pt;
+    }
+    .information{
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .information img{
+        max-width: 75%;
+        height: 75%;
+        align-self: center;
+    }
+    .information h1,.information div{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .info{
+        flex-direction: column;
+    }
+    .info h2{
+        font-size: 16pt;
+    }
+    .info ul li{
+        font-size: 14pt;
+    }
+}
