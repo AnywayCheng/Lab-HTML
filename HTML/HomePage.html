@@ -10,37 +10,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <script src="{{ url_for('static', filename='JavaScript/script.js') }}"></script>
 </head>
 <body>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <nav>
-        <ul>
-            <li><a href="{{ url_for('home') }}">Lab</a></li>
+        <ul id="navbar">
+            <li><a href="{{ url_for('home') }}">CURE Lab</a></li>
             <li><a href="{{ url_for('professor') }}">Professor</a></li>
             <li><a href="{{ url_for('members') }}">Members</a></li>
-            <li><a href="{{ url_for('thesis') }}">Thesis</a></li>
-            <li class="logo">logo</li>
+            <li><a href="{{ url_for('research') }}">Research</a></li>
+            <li><a href="{{ url_for('publication') }}">Publication</a></li>
         </ul>
     </nav> 
     
-    <header>
-        <h1 class="headertitle">xxx實驗室</h1>
+    <header> 
+        <h1 class="headertitle">CURE</h1>
     </header>
     
     <main>
         <div>
             <h1>Introduction</h1>
-            <p></p>
+            <p>Welcome to the <span style="font-weight: bold;">Cutting-Edge Research in Biomedical Technologies Laboratory (CURE Lab)</span> led by Professor C.Y.Lee. Professor Lee has been dedicated to applying bioinformatics in the development of algorithms, analytical tools, and databases. He has established several analysis tools and online systems for high-throughput technologies and completed the whole-genome maps of the Mikado and Swinhoe's pheasants. In addition, he used distributed computing technologies to develop tools and analyze massive whole-genome sequencing data</p><br>
+            <p>Currently, the research focuses on integrating bioinformatics with AI, such as developing methods for identifying tumor neoantigens and establishing a database of tumor neoantigens specific to the Taiwanese population, as well as using deep-learning approaches to develop a novel method for predicting microRNA targets and collaborating with clinical physicians on research related to metagenomics.</p><br>
+            <p>The main feature of this laboratory is its close collaboration with bioinformatics-related departments at universities such as National Taiwan University (NTU) and National Taiwan Normal University (NTNU), thanks to Professor Lee join in the Gene Sequencing Industry Alliance. Professor Lee is also a co-advising professor in the Department of Bioinformatics at NTU. Consequently, our laboratory often meetings with senior students and peers from NTU, NTNU, and other universities to discuss and share the research papers we have read and our research progress. This helps broaden our knowledge and expand our professional networks.</p><br>
+            <P>Therefore, if you are a student interested in AI, databases, or bioinformatics, you are welcome to visit the lab for more details or contact us via the phone number provided below.</P><br>
+            <P>(P.S: Due to meetings every Friday, the professor will not be on campus. Please refrain from visiting or contacting on Fridays. Thank you for your cooperation.)</P>
         </div>
         
         <div>
             <h1>Address</h1>
-            <p>台北市大安區忠孝東路三段1號-共同科館5樓</p>
-            <div class="img"><img src="https://www.fju.edu.tw/showImg/subLabelImg/1_9_83_1.png"></div>
+            <p>5F., No. 1, Sec. 3, Zhongxiao E. Rd., Da'an Dist., Taipei City 106, Taiwan</p>
+            <div class="img"><img src="{{url_for('static', filename='Picture/map.png')}}"></div>
         </div>
         
         <div>
             <h1>Contact</h1>
-            <p>02-27712171 #3855</p>
+            <p>+886-2771-2171 #3855</p>
         </div>
     </main>
 </body>

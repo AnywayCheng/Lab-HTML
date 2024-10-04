@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李建樂助理教授實驗團隊簡介</title>
+    <meta name="description" content="本網頁簡介李建樂助理教授與其實驗團隊">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style2.css') }}">
+    <script src="{{ url_for('static', filename='JavaScript/script.js') }}"></script>
+</head>
+<body>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <nav>
+    <ul id="navbar">
+      <li><a href="{{ url_for('home') }}">C.U.R.E Lab</a></li>
+      <li><a href="{{ url_for('professor') }}">Professor</a></li>
+      <li><a href="{{ url_for('members') }}">Members</a></li>
+      <li><a href="{{ url_for('research') }}">Research</a></li>
+      <li><a href="{{ url_for('publication') }}">Publication</a></li>
+    </ul>
+  </nav> 
+
+  <header>
+    <h1 class="headertitle">Research</h1>
+  </header>
+  <main>
+    <div class="timeline">
+      <div class="container right">
+        <div class="content">
+          <h1>Signature Identification for Predicting Clarithromycin Resistance in Nontuberculous Mycobacteria Using Whole Genome Sequencing Data</h1>
+          <h3>Yann-Jen Ho, Chin-Chung Shu, Mong-Hsun Tsai, Liang-Chuan Lai, Tzu-Pin Lu, Eric Y. Chuang, and Chien-Yueh Lee</h3>
+          <h3>46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (Orlando, florida)</h3>
+          <p>Clarithromycin (CLA) resistance poses a significant challenge in treating NTM infections. Traditional methods for predicting CLA resistance after a 3-day incubation, based on mutations in the rrl and erm(41) genes, have an accuracy of only 30-40%. To address this, we proposed a novel method utilizing single nucleotide variants (SNVs) identified through whole genome sequencing to predict CLA resistance more accurately. Our model achieved a classification accuracy of 87.6% on the training set and 90.4% on the test set, outperforming conventional approaches. Table 1 indicates that 10 of the 20 identified SNVs are associated with anti-drug proteins, underscoring their role in drug resistance. This study offers a more reliable approach for predicting CLA resistance, highlighting the potential for improved clinical outcomes and further research into the genetic mechanisms underlying antibiotic resistance in NTM.</p>
+          <img class="straight_poster" src="{{ url_for('static', filename='Picture/poster4.jpg') }}">
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h1>A CNN-based approach with efficient transfer learning improves microRNA-mRNA prediction</h1>
+          <h3>C.-H. Peng, H.-Y. Chen, D.-C. Cheng, E.Y. Chuang, and C.-Y. Lee</h3>
+          <h3>American Association for Cancer Research 2024 Annual Meeting (San Diego, California).</h3>
+          <p>MicroRNAs regulate over 60% of human protein-coding genes by targeting specific mRNA sites to suppress translation. Current predictive algorithms for identifying microRNA-mRNA pairs face challenges like complex data preprocessing, slow predictions, and limited binding site precision, often relying on inefficient RNN-based models. To address these issues, we proposed a CNN-based algorithm with transfer learning for direct prediction of microRNA-mRNA binding sites, bypassing extensive preprocessing. We introduced two models: the per-based model, which identifies potential target sites on 3’-UTR sequences using public databases, and the miRNA-target binding decision model, which predicts miRNA-target pairs. Both models underwent training with advanced techniques like cycle learning rate, focal loss, and gradient clipping to handle dataset imbalances. The per-based model achieved 82.14% balanced accuracy, and the miRNA-target model reached 80.39%, outperforming existing methods. Unlike other deep learning approaches, our method predicts binding states from full-length sequences without additional preprocessing or prior knowledge, offering improved prediction reliability for biomedical research.</p>
+          <img src="{{ url_for('static', filename='Picture/poster1.png') }}">
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h1>TWNeoDB: A Web-based Database for Tumor Neoantigens in the Taiwanese Population</h1>
+          <h3>Y.-H. Tseng, C.-H. Wu, C.-Y. Sung, K.C-Y. Huang, M.-H. Tsai, L.-C. Lai, T.-P. Lu, K.-S.C. Chao, E.Y. Chuang, and C.-Y. Lee*</h3>
+          <h3>American Association for Cancer Research 2024 Annual Meeting (San Diego, California)</h3>
+          <p>Tumor neoantigens, including mutated tumor-specific antigens (mTSAs) and aberrantly expressed TSAs (aeTSAs), are highly immunogenic and can trigger immune responses against cancer cells. Current neoantigen databases primarily focus on mTSAs from Western populations, but our new database emphasizes the Taiwanese population and includes both mTSAs and aeTSAs. We collected DNA and RNA sequencing data from 243 Taiwanese cancer patients, identified potential neoantigens, and conducted HLA genotyping. The data was validated against the IEDB database, and a LightGBM model was developed to predict peptide immunogenicity, achieving an AUC of 0.95 on the training data and 0.8 on the testing data. The online database allows users to search for specific peptides, access peptide characteristics, and use the LightGBM model for immunogenicity prediction. This platform supports personalized cancer vaccine and immunotherapy development tailored to the Taiwanese population.</p>
+          <img src="{{ url_for('static', filename='Picture/poster2.png') }}">
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h1>A comprehensive online system for identifying tumor neoantigens.</h1>
+          <h3>C.-Y. Sung, C.-Y. Lee, C.-H. Wu, K.C.-Y. Huang, Y.-H. Tseng, M.-H. Tsai, L.-C. Lai, T.-P. Lu, K.-S.C. Chao, and E.Y. Chuang</h3>
+          <h3>American Association for Cancer Research 2023 Annual Meeting (Orlando, Florida).</h3>
+          <p>Advances in microarray and next-generation sequencing (NGS) technologies and the widespread availability of genomic data provide a good opportunity for researchers to simultaneously analyze data from multiple molecular levels. Knowledge of detailed variant information along with corresponding gene expression profiles for specific organs is considered a key step for diagnostic and prognostic assessment of the functional effects of genetic variants. Therefore, establishing a comprehensive analytical system that provides multi-level information for a DNA variant may greatly benefit researchers.</p>
+          <img src="{{ url_for('static', filename='Picture/poster3.png') }}">
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

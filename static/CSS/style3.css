@@ -6,14 +6,15 @@
   font-family: "Noto Sans TC", sans-serif;
   font-weight: normal;  
 }
+/*-----------------------------------------------------------*/  
 body{
   padding-bottom: 5rem;
   min-height: 100vh;
-  background-color: #02133E;
+  background-color: #FFFFCD;
 }
-  
+/*-----------------------------------------------------------*/  
 nav {
-  background-color: #002b48;
+  background-color: black;
 }    
 nav ul {
   display: flex;
@@ -22,13 +23,6 @@ nav ul {
 }
 nav ul li {
   display: flex;
-}
-nav ul li.logo{
-  margin-left: auto;
-  padding: 0.75rem 1rem;
-  color: white;
-  text-decoration-line: none;
-  transition: all 0.25s ease;
 }
 nav ul li a {
   padding: 0.75rem 1rem;
@@ -39,12 +33,19 @@ nav ul li a {
 nav ul li a:hover {
   background-color: gray;
 }
-
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+}
+/*-----------------------------------------------------------*/  
 header {
   width: 100%;
   height: 30vh;
   padding: 5rem 1rem;
-  background-image: url('../Picture/Bioinformatics.jpg');
+  background-image: url('../Picture/Bioinfomatics.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 35%;
@@ -55,204 +56,166 @@ header {
   color: white;
   text-align: right;
 }
-
+/*-----------------------------------------------------------*/  
 main {
   width: 100%;
   display: flex;
   flex-direction: column;
 }   
-main div h1,
-main div h2,
-main div h3,
-main div p{
-  padding-left: 10%;
-  color: white;
-} 
 main div h1{
-  margin-top: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 25%;
+  padding: 1rem;
   font-size: 30pt;
-}
-main div h2,
-main div h3, 
-main div p{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 25%;
+  color: black;
 }
 main div h2{
+  padding: 1rem;
   font-size: 25pt;
+  color: black;
 }
-main div h3,
-main div p{
-  font-size: 15pt;
+/*-----------------------------------------------------------*/  
+#dropdown {
+  font-size: 25px; /* 增加字體大小 */
+  padding: 1rem; /* 增加填充 */
+  width: 20%; /* 調整寬度 */
+  height: auto; /* 調整高度 */
 }
-
-.inline{
+.flexbox {
   display: flex;
-}
-.inline p{
-  flex-grow: 1;
-  text-align: center;
-  padding-left: 15%;
-  padding-right: 25%;
+  flex-direction: column;
+  align-items: center;
+  border: 1rem;
 }
 
+.container {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+}
 
+.member {
+  display: flex;
+  flex-direction: column; /* Aligns items vertically */
+  align-items: center; /* Centers items horizontally */
+  padding:1rem
+}
+
+.member img { 
+  height: auto; /* Keeps the aspect ratio of the image */
+  border-radius: 50%; /* Makes the image circular */
+}
+
+.member p {
+  padding: 1rem; /* Adds space between the image and the name */
+  text-align: center; /* Centers the text */
+  font-size: 15pt;
+  color: black;
+}
+/*-----------------------------------------------------------*/  
 @media screen and (max-width: 1200px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+  nav ul li {
+    text-align: left;
+  }
+  .menu-icon {
+    background-color: #191432;
+    display: block; 
+  }
+  .active {
+    display: flex; 
+  }
+/*-----------------------------------------------------------*/  
   header {
-    padding: 3rem 1rem;
+    padding: 6rem 0rem;
     height: 35vh;
     background-position-y: 25%;
   }
   .headertitle {  
-    padding-right: 0rem;
-    font-size: 45pt;
+    padding-right: 0.5rem;
+    font-size: 40pt;
     text-align: right;
   }
-  nav ul {
-    flex-direction: row;
-    padding-left: 1rem;
-  }
-  nav ul li a, nav ul li.logo {
-    padding: 1rem 1.5rem;
-    font-size: 20pt;
-  }
+/*-----------------------------------------------------------*/     
   main div h1 {
-    padding-left: 20%;
     font-size: 25pt;
-    text-align: left;
   }
-  main div h2{
+  main div h2 {
     font-size: 22pt;
   }
-  main div h2, main div h3, main div p {
-    padding-left: 20%;
+/*-----------------------------------------------------------*/  
+  #dropdown {
+    font-size: 25px; /* 增加字體大小 */
   }
-  .inline h3{
-    font-size: 20pt;
-  }
-  .inline p{
-    font-size: 20pt;
-    padding-right: 10%;
+  .container {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    flex-direction: column;
   }
 }
 
 @media screen and (max-width: 1024px) {
   header {
-    padding: 3rem 0.5rem;
+    padding: 5rem 0rem;
     height: 30vh;
     background-position-y: 25%;
   }
   .headertitle {
-    padding-right: 3rem;
-    font-size: 40pt;
-    text-align: right;
+    font-size: 35pt;
   }
-  nav ul {
-    flex-direction: row;
-    padding-left: 1rem;
-  }
-  nav ul li a, nav ul li.logo {
-    padding: 0.75rem 1rem;
-    font-size: 18pt;
-  }
+  /*-----------------------------------------------------------*/  
   main div h1 {
-    padding-left: 10%;
     font-size: 24pt;
-    text-align: left;
   }
   main div h2{
     font-size: 22pt;
   }
-  main div h2, main div h3, main div p {
-    padding-left: 10%;
-  }
-  .inline h3{
-    font-size: 20pt;
-  }
-  .inline p{
-    font-size: 20pt;
-    padding-right: 10%;
+  /*-----------------------------------------------------------*/  
+  #dropdown {
+    font-size: 21px;
   }
 }
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 1rem 0rem;
+    padding: 4rem 0rem;
     height: 25vh;
     background-position-y: 35%;
   }
   .headertitle {
-    padding-right: 1rem;
     font-size: 30pt;
-    text-align: right;
   }
-  nav ul {
-    flex-direction: column;
-    padding-left: 1rem;
-  }
-  nav ul li a, nav ul li.logo {
-    padding: 0.75rem;
-    font-size: 16pt;
-  }
+  /*-----------------------------------------------------------*/  
   main div h1 {
-    padding-left: 5%;
     font-size: 22pt;
-    text-align: left;
-  }
-  main div h2, main div h3, main div p {
-    padding-left: 5%;
   }
   main div h2{
     font-size: 20pt;
   }
-  .inline h3{
-    font-size: 18pt;
-  }
-  .inline p{
-    font-size: 18pt;
-    padding-right: 5%;
+  /*-----------------------------------------------------------*/  
+  #dropdown {
+    font-size: 18px;
   }
 }
 
 @media screen and (max-width: 480px) {
   header {
-    padding: 0rem 0rem;
+    padding: 1rem 0rem;
     height: 20vh;
-    background-position-y: 50%;
+    background-position-y: 30%;
   }
   .headertitle {
-    padding-right: 0rem;
     font-size: 20pt;
-    text-align: right;
   }
-  nav ul {
-    flex-direction: column;
-    padding-left: 0.5rem;
-  }
-  nav ul li a, nav ul li.logo {
-    padding: 0.5rem;
-    font-size: 14pt;
-  }
+  /*-----------------------------------------------------------*/  
   main div h1 {
-    padding-left: 1.5rem;
     font-size: 20pt;
-    text-align: left;
   }
   main div h2{
     font-size: 18pt;
   }
-  main div h2, main div h3, main div p {
-    padding-left: 5%;
-  }
-  .inline h3{
-    font-size: 15pt;
-  }
-  .inline p{
-    font-size: 15pt;
-    padding-right: 5%;
+  /*-----------------------------------------------------------*/  
+  #dropdown {
+    font-size: 15px;
   }
 }

@@ -10,15 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style3.css') }}">
+    <script src="{{ url_for('static', filename='JavaScript/script.js') }}"></script>
 </head>
 <body>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <nav>
-        <ul>
-            <li><a href="{{ url_for('home') }}">Lab</a></li>
+        <ul id="navbar">
+            <li><a href="{{ url_for('home') }}">C.U.R.E Lab</a></li>
             <li><a href="{{ url_for('professor') }}">Professor</a></li>
             <li><a href="{{ url_for('members') }}">Members</a></li>
-            <li><a href="{{ url_for('thesis') }}">Thesis</a></li>
-            <li class="logo">logo</li>
+            <li><a href="{{ url_for('research') }}">Research</a></li>
+            <li><a href="{{ url_for('publication') }}">Publication</a></li>
         </ul>
     </nav> 
 
@@ -27,50 +29,93 @@
     </header>    
         
     <main>
-        <div>
-            <h1>研究助理</h1>
-            <div class = "inline">
-                <h3>&ensp;&ensp;&ensp;&emsp;</h3>
-                <p>張如儀</p>
+        <!-- 下拉式選單 -->
+        <select id="dropdown" onchange="switchContent()">
+            <option value="block0">研究助理</option>
+            <option value="block1">碩士生</option>
+            <option value="block2">博士生</option>
+            <option value="block3">已畢業學長姊</option>
+        </select>
+
+        <!-- Flexbox 區塊 -->
+        <div id="block0" class="flexbox">
+            <h2></h2>
+            <div class="container">
+                <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                    <p>張如儀</p>
+                </div>
             </div>
         </div>
-        <div>
-            <h1>北科研究生</h1>
-            <h2>碩士</h2>
-            <div class = "inline">
-                <h3>113年</h3>
-                <p>蘇聖傑 | 鄭力瑋</p>
+        <div id="block1" class="flexbox" style="display: none;">
+            <h2>113年</h2>
+            <div class="container">
+                <div class="member">
+                  <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                  <p>鄭力瑋</p>
+                </div>
+                <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                  <p>蘇聖傑</p>
+                </div>
+                <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                  <p>林蘭伃(共指)</p>
+                </div>
+                <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                    <p>余尚憲(共指)</p>
+                </div>
+            </div>
+            <h2>111年</h2>
+            <div class="container">
+                <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                    <p>何彥禎(共指)</p>
+                </div>      
             </div>
         </div>
-        <div>
-            <h1>共同指導研究生</h1>
-            <h2>博士</h2>
-            <div class = "inline">
-                <h3>113年</h3><p>鄭柏裕</p>
+        <div id="block2" class="flexbox" style="display: none;">
+            <h2>113年</h2>
+            <div class="container">
+                <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                    <p>鄭柏裕(共指)</p>
+                </div>
             </div>
-            <div class = "inline">
-                <h3>112年</h3><p>李沅達</p>
-            </div>
-            <h2>碩士</h2>
-            <div class = "inline">
-                <h3>113年</h3><p>林蘭伃</p>
-            </div>
-            <div class = "inline">
-                <h3>111年</h3><p>何彥禛</p>
+            <h2>112年</h2>
+            <div class="container">
+                <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                    <p>李沅達(共指)</p>
+                </div>
             </div>
         </div>
-        <div>
-            <h1>畢業學長姊</h1>
-            <h2>畢業於</h2>
-            <div class = "inline">
-                <h3>112年</h3><p>劉姜麟	| 曾于瑄</p>
+        <div id="block3" class="flexbox" style="display: none;">
+            <h1>碩士畢業</h1>
+            <h2>畢業於112年</h2>
+            <div class="container">
+                <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                    <p>曾于瑄(共指)</p>
+                </div>
+                <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                    <p>劉姜麟(共指)</p>
+                </div>
             </div>
-            <div class = "inline">
-                <h3>111年</h3><p>張珊慈	| 宋家妤</p>
+            <h2>畢業於111年</h2>
+            <div class="container">
+                <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                    <p>宋家妤(共指)</p>
+                  </div>
+                  <div class="member">
+                    <img src="{{ url_for('static', filename='Picture/photo.jpg') }}">
+                    <p>張珊慈(共指)</p>
+                  </div>
             </div>
         </div>
     </main>
-
-    
 </body>
 </html>

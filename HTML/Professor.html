@@ -10,15 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style1.css') }}">
+    <script src="{{ url_for('static', filename='JavaScript/script.js') }}"></script>
 </head>
 <body>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <nav>
-        <ul>
-            <li><a href="{{ url_for('home') }}">Lab</a></li>
+        <ul id="navbar">
+            <li><a href="{{ url_for('home') }}">C.U.R.E Lab</a></li>
             <li><a href="{{ url_for('professor') }}">Professor</a></li>
             <li><a href="{{ url_for('members') }}">Members</a></li>
-            <li><a href="{{ url_for('thesis') }}">Thesis</a></li>
-            <li class="logo">logo</li>
+            <li><a href="{{ url_for('research') }}">Research</a></li>
+            <li><a href="{{ url_for('publication') }}">Publication</a></li>
         </ul>
     </nav> 
     
@@ -30,17 +32,19 @@
         <div class = information>
             <img src ="{{ url_for('static', filename='Picture/C.Y.Lee.jpg') }}">
             <div>
-                <h1>李建樂  助理教授</h1>
+                <h1>Chien-Yueh Lee</h1>
                 <div class = info>
                     <div>
-                        <h2>職務 : 助理教授<br>&emsp;&emsp;&ensp; 行政及諮詢組組長</h2>
-                        <h2>辦公室 : 共同科館509室</h2>
+                        <h2>Position : Assistant Profecessor & Officer,</h2>
+                        <h2>Administration and Consultation Service Section,</h2>
+                        <h2>Computer and Network Center</h2>
+                        <h2>Lab Office : Rm. 509, General Studies Building</h2>
                         <h2>E-MAIL : leecy@ntut.edu.tw</h2>
-                        <h2>聯絡電話 : 02-27712171#3855</h2>
-                        <h2>授課資訊 :</h2>
+                        <h2>Contact : +886-2771-2171#3855</h2>
+                        <h2>Teaching Courses in this Semester :</h2>
                         <ul>
-                            <li>資料庫</li>
-                            <li>計算生物學及醫學資訊</li>
+                            <li>Database</li>
+                            <li>Computational Biology & Medical Informatic</li>
                         </ul>
                     </div>
                     <div>
@@ -69,7 +73,7 @@
         </div>
         
         <div>
-            <h1>工作經歷</h1>
+            <h1>Working Experience</h1>
             <ul>
                 <li>
                     Assistant Professor, Master Program in Artificial Intelligence, Innovation Frontier Institute of Research for Science and Technology, NTUT, Taiwan. (Feb. 2024 – Present)
@@ -95,19 +99,19 @@
         <div>
             <h1>Research Experience</h1>
             
-            <h3>Development of a comprehensive pipeline and tool for identifying neoantigens in cancers.(2021 – Present)</h3>
+            <h3>Development of a comprehensive pipeline and tool for identifying neoantigens in cancers. (2021 – Present)</h3>
             <ul>
                 <li>Proposing a method and analytic pipeline to identify neoantigens from DNA-seq, RNA-seq, and/or liquid chromatography-tandem mass spectrometry data.</li>
                 <li>Establishing an online database of tumor neoantigens in the Taiwanese population.</li>
             </ul>
             
-            <h3>Development of a deep learning-based method for predicting microRNA targets and an integrated database.(2021 – Present)</h3>
+            <h3>Development of a deep learning-based method for predicting microRNA targets and an integrated database. (2021 – Present)</h3>
             <ul>
                 <li>Development of a novel algorithm for predicting targets by employing the U-Net architecture based on a convolutional neural network.</li>
                 <li>Integrating the proposed algorithm with other existing ones as an online platform for providing a reliable predicted result.</li>
             </ul>
             
-            <h3>Microbial genome or metagenomics studies.(2021 – Present)</h3>
+            <h3>Microbial genome or metagenomics studies. (2021 – Present)</h3>
             <ul>
                 <li>Applying a machine learning-based imputation method to improve the current limitations of the Mycobacterium tuberculosis genomic data on transmission inference.</li>
                 <li>Prediction of drug resistance genes in non-tuberculosis mycobacterium from whole-genome sequencing data using a genetic algorithm.</li>
@@ -115,23 +119,23 @@
                 <li>Using metagenomic approaches and linear discriminant analysis to identify gut microbiota associated with metabolic syndrome.</li>
             </ul>
             
-            <h3>A scalable high-throughput pipeline for inferring the molecular mechanisms of non-coding genetic variants.(2019 – 2021)</h3>
+            <h3>A scalable high-throughput pipeline for inferring the molecular mechanisms of non-coding genetic variants. (2019 – 2021)</h3>
             <ul>
                 <li>Development of a post-GWAS tool with scalable, extensible, and distributed computing architecture based on Apache Spark.</li>
                 <li>Integration of large-scale functional genomics data for annotation of genetic variants.</li>
                 <li>Inferring the molecular mechanisms via tissue contexts, target genes, and downstream biological processes underlying GWAS findings.</li>
             </ul>
             
-            <h3>De novo genome assembly and phylogenetic analyses of Mikado and Swinhoe’s pheasants (Syrmaticus mikado and Lophura swinhoii) indigenous to Taiwan.(2014 – 2018)</h3>
+            <h3>De novo genome assembly and phylogenetic analyses of Mikado and Swinhoe's pheasants (Syrmaticus mikado and Lophura swinhoii) indigenous to Taiwan. (2014 – 2018)</h3>
             <ul>
-                <li>Genome assembly and annotation of Mikado and Swinhoe’s pheasants.</li>
+                <li>Genome assembly and annotation of Mikado and Swinhoe's pheasants.</li>
                 <li>Identification of gene families and phylogenetic analyses.</li>
                 <li>Examination of genes under positive selection and enrichment analysis.</li>
                 <li>Identification of the MHC-B region of the Mikado pheasant.</li>
                 <li>Investigation of the evolutionary history among long-tailed pheasants.</li>
             </ul>
             
-            <h3>Development of web-based online systems for high-throughput data analyses and visualization.(2010 – 2021)</h3>
+            <h3>Development of web-based online systems for high-throughput data analyses and visualization. (2010 – 2021)</h3>
             <ul>
                 <li>MiDSystem: A comprehensive online system for bacterial de novo genome assembly.</li>
                 <li>VariED: The first integrated database of gene annotation and expression profiles for variants related to human diseases.</li>
@@ -141,22 +145,37 @@
                 <li>miRSystem: An integrated system for characterizing enriched functions and pathways of microRNA targets.</li>
             </ul>
             
-            <h3>Propose a prediction algorithm for microRNA targets using a Hidden Markov Model.(2007 – 2009)</h3>
+            <h3>Propose a prediction algorithm for microRNA targets using a Hidden Markov Model. (2007 – 2009)</h3>
             
-            <h3>Development of Cancer Repository System, a web-based management system for digitalization and consolidation of clinical records and specimen data from cancer patients.(2007 – 2008)</h3>
+            <h3>Development of Cancer Repository System, a web-based management system for digitalization and consolidation of clinical records and specimen data from cancer patients. (2007 – 2008)</h3>
         </div>
 
         <div>
-            <h1>Conference Posters</h1>
+            <h1>Research Grants</h1>
             <ul>
                 <li>
-                    "A CNN-based approach with efficient transfer learning improves microRNA-mRNA prediction", American Association for Cancer Research 2024 Annual Meeting, 聖地牙哥, 2024/04/05 
+                    PI, Development of an integrated analytical system for novel neoantigen identification from noncoding regions,NSTC 113-2221-E-039-005-MY3 (08/2024 – 07/2027)
                 </li>
                 <li>
-                    "TWNeoDB A web-based database for tumor neoantigens in the Taiwanese population", American Association for Cancer Research 2024 Annual Meeting, 聖地牙哥, 2024/04/05 
+                    Co-PI, Using bioinformatics to establish an academic and industrial alliance of big data analytics for healthcare,113-2622-8-002-010-TB (02/2024 – 01/2025)
                 </li>
                 <li>
-                    "A comprehensive online system for identifying tumor neoantigens", American Association for Cancer Research 2023 Annual Meeting, 奧蘭多, 2023/04/14 
+                    Co-PI, DEciphering Tuberculosis transmission using genomic Epidemiology in Kaohsiung (DETEK-TB),112-2314-B-002-211-MY3 (08/2023 – 07/2026)
+                </li>
+                <li>
+                    Sub-project PI, Identification of the microbiota distribution of peri-implantitis using metagenomic approaches,CMU 111-IP-03 (12/2022 – 07/2023)
+                </li>
+                <li>
+                    Co-PI, DEciphering Tuberculosis transmission using genomic Epidemiology in Kaohsiung(DETEK-TB),112-2314-B-002-211-MY3 (08/2023 – 07/2026)
+                </li>
+                <li>
+                    PI, Development of a deep learning-based approach for predicting microRNA targets and an integrated database,NSTC 111-2222-E-039-003-MY2 (10/2022 – 09/2024)
+                </li>
+                <li>
+                    PI, Development of an online analytic platform for identifying tumor neoantigens from multi-omics data,CMU 111-N-10 (10/2022 – 07/2023)
+                </li>
+                <li>
+                    PI, Development of an automatic analysis tool and database for tumor neoantigens based on high-throughput platforms,CMU 110-N-06 (10/2021 – 07/2022)
                 </li>
             </ul>
         </div>

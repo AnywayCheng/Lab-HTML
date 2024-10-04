@@ -5,15 +5,15 @@
     font-family: "Noto Sans TC", sans-serif;
     font-weight: normal;
 }
-
+/*-----------------------------------------------------------*/
 body {
     padding-bottom: 5rem;
     min-height: 100vh;
-    background-color: #02133E;
+    background-color: #FFFFCD;
 }
-
+/*-----------------------------------------------------------*/
 nav {
-    background-color: #002b48;
+    background-color: black;
 } 
 nav ul {
     display: flex;
@@ -22,13 +22,6 @@ nav ul {
 }
 nav ul li {
     display: flex;
-}
-nav ul li.logo {
-    margin-left: auto;
-    padding: 0.75rem 1rem;
-    color: white;
-    text-decoration-line: none;
-    transition: all 0.25s ease;
 }
 nav ul li a {
     padding: 0.75rem 1rem;
@@ -39,12 +32,19 @@ nav ul li a {
 nav ul li a:hover {
     background-color: gray;
 }
-
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+}
+/*-----------------------------------------------------------*/
 header {
     width: 100%;
     height: 30vh;
     padding: 5rem 1rem;
-    background-image: url('../Picture/Bioinformatics.jpg');
+    background-image: url('../Picture/Bioinfomatics.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 35%;
@@ -55,12 +55,46 @@ header {
     color: white;
     text-align: right;
 }
-
+/*-----------------------------------------------------------*/
 main {
     width: 100%;
     display: flex;
     flex-direction: column;
-} 
+}
+main div h1 {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 15%;
+    color: black;
+    font-size: 30pt;
+}
+main div h3 {
+    padding-bottom: 1rem;
+    padding-left: 15%;
+    color: black;
+    font-size: 20pt;
+    padding-right: 15%;
+}
+main div ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 17.5%;
+    padding-right: 20%; 
+}
+main div ul li {       
+    width: 100%;
+    padding-bottom: 1rem;
+    list-style-type: square;
+    font-size: 15pt;
+    color: black;
+    line-height: 2;
+}
+main div ul li::marker {
+    color: grey;
+}
+/*-----------------------------------------------------------*/
 .information {
     display: flex;
     flex-direction: row;
@@ -81,14 +115,14 @@ main {
     max-width: 100%;
     height: 100%;
 }
-
+/*-----------------------------------------------------------*/
 .info {
     display: flex;
     flex-direction: row;
 }
 .info h2 {
     padding-right: 0rem;
-    color: white;
+    color: black;
     font-size: 20pt;
     margin-top: 1rem;
 }
@@ -100,62 +134,42 @@ main {
     padding-bottom: 0rem;
     font-size: 18pt;
 }
-
-main div h1,main div h3 {
-    padding-bottom: 1rem;
-    padding-left: 15%;
-    
-}   
-main div h1 {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    color: white;
-    font-size: 30pt;
-}
-main div h3 {
-    color: #dcdcdc;
-    font-size: 20pt;
-    padding-right: 15%;
-}
-
-main div ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding-left: 17.5%;
-    padding-right: 20%; 
-}
-main div ul li {       
-    width: 100%;
-    padding-bottom: 1rem;
-    list-style-type: square;
-    font-size: 15pt;
-    color: #C0C0C0;
-    line-height: 2;
-}
-main div ul li::marker {
-    color: #C0C0C0;
-}
-
+/*-----------------------------------------------------------*/
 @media screen and (max-width: 1200px) {
-    header {
-      padding: 3rem 1rem;
-      height: 35vh;
-      background-position-y: 25%;
+    nav ul {
+        flex-direction: column;
+        display: none;
     }
-    .headertitle {
-      padding-right: 4rem;
-      font-size: 45pt;
-      text-align: right;
-    }
-    main div h1 ,main div h3{
-        padding-left: 3rem;
+    nav ul li {
         text-align: left;
     }
+    .menu-icon {
+        background-color: #191432;
+        display: block; 
+    }
+    .active {
+        display: flex; 
+    }
+/*-----------------------------------------------------------*/
+    header {
+        padding: 6rem 0rem;
+        height: 35vh;
+        background-position-y: 25%;
+    }
+    .headertitle {
+        padding-right: 0.5rem;
+        font-size: 40pt;
+        text-align: right;
+    }
+/*-----------------------------------------------------------*/
     main div h1 {
-      font-size: 28pt; 
+        padding-left: 3rem;
+        text-align: left;
+        font-size: 28pt; 
     }
     main div h3 {
+        padding-left: 3rem;
+        text-align: left;
         font-size: 22pt;
     }
     main div ul{
@@ -165,14 +179,7 @@ main div ul li::marker {
     main div ul li{
         font-size: 20pt;
     }
-    nav ul {
-      flex-direction: row;
-      padding-left: 1rem;
-    }
-    nav ul li a, nav ul li.logo {
-      padding: 1rem 1.5rem;
-      font-size: 20pt;
-    }
+/*-----------------------------------------------------------*/
     .information{
         flex-direction: column;
         padding-left: 3rem;
@@ -187,6 +194,7 @@ main div ul li::marker {
         padding-left: 0;
         padding-right: 0;
     }
+/*-----------------------------------------------------------*/
     .info h2{
         font-size: 20pt;
     }
@@ -197,23 +205,20 @@ main div ul li::marker {
 
 @media screen and (max-width: 1024px) {
     header {
-      padding: 3rem 0.5rem;
-      height: 30vh;
-      background-position-y: 25%;
+        padding: 5rem 0rem;
+        height: 30vh;
+        background-position-y: 25%;
     }
     .headertitle {
-      padding-right: 3rem;
-      font-size: 35 pt;
-      text-align: right;
+        font-size: 35pt;
     }
-    main div h1 ,main div h3{
-        padding-left: 3rem;
-        text-align: left;
-    }
+/*-----------------------------------------------------------*/
     main div h1 {
-      font-size: 28pt; 
+        padding-left: 3rem;
+        font-size: 28pt; 
     }
     main div h3 {
+        padding-left: 3rem;
         font-size: 22pt;
     }
     main div ul{
@@ -223,28 +228,20 @@ main div ul li::marker {
     main div ul li{
         font-size: 20pt;
     }
-    nav ul {
-      flex-direction: row;
-      padding-left: 1rem;
-    }
-    nav ul li a, nav ul li.logo {
-      padding: 0.75rem 1rem;
-      font-size: 18pt;
-    }
+/*-----------------------------------------------------------*/
     .information{
-        flex-direction: column;
         padding-left: 3rem;
         padding-right: 1rem;
     }
     .information img{
         max-width: 75%;
         height: 75%;
-        align-self: center;
     }
     .information h1,.information div{
         padding-left: 0;
         padding-right: 0;
     }
+/*-----------------------------------------------------------*/
     .info h2{
         font-size: 24pt;
     }
@@ -255,24 +252,20 @@ main div ul li::marker {
 
 @media screen and (max-width: 768px) {
     header {
-      padding: 1rem 0rem;
-      height: 25vh;
-      background-position-y: 35%;
+        padding: 4rem 0rem;
+        height: 25vh;
+        background-position-y: 35%;
     }
     .headertitle {
-      padding-right: 2rem;
-      font-size: 25pt;
-      text-align: right;
+        font-size: 25pt;
     }
-    main div h1 ,main div h3{
-        padding-left: 2rem;
-        text-align: left;
-    }
+/*-----------------------------------------------------------*/
     main div h1 {
-      font-size: 24pt;
-      
+        padding-left: 2rem;
+        font-size: 24pt;
     }
     main div h3 {
+        padding-left: 2rem;
         font-size: 20pt;
     }
     main div ul{
@@ -282,28 +275,19 @@ main div ul li::marker {
     main div ul li{
         font-size: 16pt;
     }
-    nav ul {
-      flex-direction: column;
-      padding-left: 1rem;
-    }
-    nav ul li a, nav ul li.logo {
-      padding: 0.75rem;
-      font-size: 16pt;
-    }
     .information{
-        flex-direction: column;
         padding-left: 3rem;
         padding-right: 1rem;
     }
     .information img{
         max-width: 75%;
         height: 75%;
-        align-self: center;
     }
     .information h1,.information div{
         padding-left: 0;
         padding-right: 0;
     }
+/*-----------------------------------------------------------*/    
     .info{
         flex-direction: column;
     }
@@ -317,23 +301,20 @@ main div ul li::marker {
 
 @media screen and (max-width: 480px) {
     header {
-      padding: 0rem 0rem;
-      height: 20vh;
-      background-position-y: 50%;
+        padding: 1rem 0rem;
+        height: 20vh;
+        background-position-y: 30%;
     }
     .headertitle {
-      padding-right: 0rem;
-      font-size: 20pt;
-      text-align: right;
+        font-size: 20pt;
     }
-    main div h1 ,main div h3{
-        padding-left: 1rem;
-        text-align: left;
-    }
+/*-----------------------------------------------------------*/  
     main div h1{
+        padding-left: 1rem;
         font-size: 20pt;
     }
     main div h3{
+        padding-left: 1rem;
         font-size: 15pt;
     }
     main div ul{
@@ -343,28 +324,20 @@ main div ul li::marker {
     main div ul li{
         font-size: 12pt;
     }
-    nav ul {
-      flex-direction: column;
-      padding-left: 0.5rem;
-    }
-    nav ul li a, nav ul li.logo {
-      padding: 0.5rem;
-      font-size: 14pt;
-    }
+/*-----------------------------------------------------------*/  
     .information{
-        flex-direction: column;
         padding-left: 1rem;
         padding-right: 1rem;
     }
     .information img{
         max-width: 75%;
         height: 75%;
-        align-self: center;
     }
     .information h1,.information div{
         padding-left: 0;
         padding-right: 0;
     }
+/*-----------------------------------------------------------*/  
     .info{
         flex-direction: column;
     }
